@@ -28,7 +28,7 @@ static void _logos_method$_ungrouped$UIKeyboardImpl$longPressAction(UIKeyboardIm
         
         ButtonPressHandler *handler = [[ButtonPressHandler alloc] initWithKeyboard:self];
         UnicodeKBView *view = [[UnicodeKBView alloc] initWithFrame:self.frame withButtonPressListener:handler];
-        [self addSubview:view];
+        [[self superview] addSubview:view];
         [layoutStar deactivateActiveKeys];
     }
     return _logos_orig$_ungrouped$UIKeyboardImpl$longPressAction(self, _cmd);

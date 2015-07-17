@@ -9,7 +9,7 @@
 #import "UnicodeKBView.h"
 
 @interface UnicodeKBView()
-@property (strong, nonatomic) id receiver;
+@property (strong, nonatomic) id<ButtonPressListener> receiver;
 @property (strong, nonatomic) Preferences* prefs;
 
 - (UIScrollView *)buildScrollView;
@@ -57,7 +57,7 @@
     CGRect frame = CGRectMake(0, CGRectGetHeight(self.frame) - 15, CGRectGetWidth(self.frame), 20);
     
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    label.text = @"BSAP © 2014";
+    label.text = @"BSAP © 2015";
     
     label.font = [label.font fontWithSize:10];
     label.textAlignment = NSTextAlignmentRight;

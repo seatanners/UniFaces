@@ -21,7 +21,7 @@
         
         ButtonPressHandler *handler = [[ButtonPressHandler alloc] initWithKeyboard:self];
         UnicodeKBView *view = [[UnicodeKBView alloc] initWithFrame:self.frame withButtonPressListener:handler];
-        [self addSubview:view];
+        [[self superview] addSubview:view];
         [layoutStar deactivateActiveKeys];
     }
     return %orig;
